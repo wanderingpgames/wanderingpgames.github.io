@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>brainium</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md">
+        <div class="container-fluid"><a class="navbar-brand" href="#">Brainium</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav">
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="col diceAPI">
+            <h1>Rolling Dice</h1>
+            <img src="assets/img/d1.png" name="mydice">
+            <form>
+                <input class="btn btn-warning" type="button" value="Throw dice!" onClick="throwdice()">
+            </form>
+            <p> This free script provided by<br>
+                <a href="http://javascriptkit.com">JavaScript Kit</a>
+            </p>
+            <p>Modified by WanderingP@github</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="col"><div class="card">
+  <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Score table</h3>
+  <div class="card-body">
+    <div id="table" class="table-editable">
+      <span class="table-add float-right mb-3 mr-2"><a href="#!" class="text-warning"><i
+            class="fas fa-plus fa-2x" aria-hidden="true"></i></a></span>
+            <p class="table-add" style="text-align: center;">Enter your player names and manage scores here.</p>
+      <table class="table table-bordered table-responsive-md table-striped text-center">
+        <thead>
+          <tr>
+            <th class="text-center" contenteditable="true">Player One</th>
+            <th class="text-center" contenteditable="true">Player Two</th>
+            <th class="text-center" contenteditable="true">Player Three</th>
+            <th class="text-center" contenteditable="true">Player Four</th>
+            <th class="text-center" contenteditable="true">Player Five</th>
+            <th class="text-center" contenteditable="true">Player Six</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="pt-3-half" contenteditable="true"></td>
+            <td class="pt-3-half" contenteditable="true"></td>
+            <td class="pt-3-half" contenteditable="true"></td>
+            <td class="pt-3-half" contenteditable="true"></td>
+            <td class="pt-3-half" contenteditable="true"></td>
+            <td class="pt-3-half" contenteditable="true"></td>
+          </tr>
+            <tr>
+            <td class="pt-3-half" contenteditable="true"></td>
+            <td class="pt-3-half" contenteditable="true"></td>
+            <td class="pt-3-half" contenteditable="true"></td>
+            <td class="pt-3-half" contenteditable="true"></td>
+            <td class="pt-3-half" contenteditable="true"></td>
+            <td class="pt-3-half" contenteditable="true"></td>
+          </tr>
+            <tr>
+            <td class="pt-3-half" contenteditable="true"></td>
+            <td class="pt-3-half" contenteditable="true"></td>
+            <td class="pt-3-half" contenteditable="true"></td>
+            <td class="pt-3-half" contenteditable="true"></td>
+            <td class="pt-3-half" contenteditable="true"></td>
+            <td class="pt-3-half" contenteditable="true"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div></div>
+    </div>
+    <div>
+        <div class="container">
+            <div class="row" style="margin-bottom: 2em; margin-top: 2em;">
+                <div class="col-md-6" style="height: 400px;">
+                    <h2 style="text-align: center;">Challenges Table</h2>
+                    <div class="table-responsive flex-wrap" style="height: 400px;">
+                        
+                        <table class="table table-striped table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Dice Roll</th>
+                                    <th>Challenge</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><button id="charades-btn" class="btn btn-success" type="button">Charades</button></td>
+                                    <td>It's charades!</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><button id="hum-btn" class="btn btn-success" type="button">Hum That Tune!</button></td>
+                                    <td>Pick a song and hum that tune.</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><button id="act-btn" class="btn btn-success" type="button">Act it out!</button></td>
+                                    <td>Pick a character and act it out.</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td><button id="cam-btn" class="btn btn-primary" type="button">Cam Sketch</button></td>
+                                    <td>Hold a paper to the camera and sketch out the word</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td><button id="pc-btn" class="btn btn-primary" type="button">PC Sketch</button></td>
+                                    <td>Pick a word and the sketch it on the interactive whiteboard</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td><button id="skulpture-btn" class="btn btn-primary" type="button">Skulpture</button></td>
+                                    <td>Using play dough, skulpt your chosen word.</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td><button id="mindmeld-btn" class="btn btn-warning" type="button">MindMeld</button></td>
+                                    <td>Pick a word and write three words you associate with it, all players have to guess what your associations.</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td><button id="spelling-btn" class="btn btn-warning" type="button">Spelling!</button></td>
+                                    <td>Pick a word and take turns in spelling it out loud... backwards....</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td><button id="zelpuz-btn" class="btn btn-warning" type="button">Zelpuz</button></td>
+                                    <td>Read out the definition, each player guesses its meaning.</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td><button id="quiz-btn" class="btn btn-danger" type="button">Quiz Time!</button></td>
+                                    <td>Each player and yourself, guess the answer to three multiple choice questions of your choice.</td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td><button id = "gen-btn" class="btn btn-danger" type="button">General Knowledge</button></td>
+                                    <td>Each player including yourself, quess the answer to six questions chosen by you.</td>
+                                </tr>
+                                <tr>
+                                    <td>12-16</td>
+                                    <td><button  id="free-btn" class="btn btn-light" type="button">Free Choice</button></td>
+                                    <td>You can pick any challenge!</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    
+                    <!--Charades-->
+                    <div id="charades" style="display:none;">
+                        <div id="charades-intro">
+                        <h1>Charades</h1>
+                        <p>
+                            The first person to guess correctly recieves 2 points <br/>
+                            If no one guesses, you lose a point!
+                        </p>
+                        </div>
+                        <div id="charades-topic" style="display:none;"></div>
+                            <button id="charades_topic_btn" class="btn btn-success" type="button">Get a charade!</button>
+                    </div>
+
+
+                    <!--Hum that tune-->
+                    <div id="hum" style="display:none;">
+                        <div id="hum-intro">
+                        <h1>Hum that tune!</h1>
+                        <p>
+                            The first person to guess correctly recieves 2 points <br/>
+                            If no one guesses, you lose a point!
+                        </p>
+                        </div>
+                        <div id="hum-topic" style="display:none;"></div>
+                            <button id="hum_topic_btn" class="btn btn-success" type="button">Get a song!</button>
+                    </div>
+
+                    <!--Act it out-->
+                    <div id="act" style="display:none;">
+                        <div id="act-intro">
+                        <h1>Act it Out!</h1>
+                        <p>
+                            The first person to guess correctly recieves 2 points <br/>
+                            If no one guesses, you lose a point!
+                        </p>
+                        </div>
+                        <div id="act-topic" style="display:none;"></div>
+                            <button id="act_topic_btn" class="btn btn-success" type="button">Get an act!</button>
+                    </div>
+
+                    <!--Cam Sketch-->
+                    <div id="cam" style="display:none;">
+                        <div id="cam-intro">
+                        <h1>Cam Sketch</h1>
+                        <p>
+                            The first person to guess correctly recieves 2 points <br/>
+                            If no one guesses, you lose a point!
+                        </p>
+                        </div>
+                        <div id="cam-topic" style="display:none;"></div>
+                            <button id="cam_topic_btn" class="btn btn-primary" type="button">Get a noun!</button>
+                    </div>
+
+                    <!--PC Sketch-->
+                    <div id="pc" style="display:none;">
+                        <div id="pc-intro">
+                        <h1>PC Sketch</h1>
+                        <p>
+                            The first person to guess correctly recieves 2 points <br/>
+                            If no one guesses, you lose a point! <br/>
+                            <a target="_blank" href="https://awwapp.com/#">Please follow this link to an interactive whiteboard and send invites to you team!</a>
+                        </p>
+                        </div>
+                        <div id="pc-topic" style="display:none;">
+                        </div>
+                            <button id="pc_topic_btn" class="btn btn-primary" type="button">Get a noun!</button>
+                    </div>
+
+                    <!--Skulpture-->
+                    <div id="skulpture" style="display:none;">
+                        <div id="skulpture-intro">
+                        <h1>Skulpture</h1>
+                        <p>
+                            The first person to guess correctly recieves 2 points <br/>
+                            If no one guesses, you lose a point!
+                        </p>
+                        </div>
+                        <div id="skulpture-topic" style="display:none;"></div>
+                            <button id="skulpture_topic_btn" class="btn btn-primary" type="button">Get a noun!</button>
+                    </div>
+
+                    <!--Mindmeld-->
+                    <div id="mindmeld" style="display:none;">
+                        <div id="mindmeld-intro">
+                        <h1>Mindmeld</h1>
+                        <p>
+                            Gain one point for each of your words that a player guesses correctly.
+                        </p>
+                        </div>
+                        <div id="mindmeld-topic" style="display:none;"></div>
+                            <button id="mindmeld_topic_btn" class="btn btn-primary" type="button">Get a noun!</button>
+                    </div>
+
+                    <!--Spelling-->
+                    <div id="spelling" style="display:none;">
+                        <div id="spelling-intro">
+                        <h1>Gnilleps</h1>
+                        <p>
+                            Gain a point for guessing correctly, however you lose a point if you get it wrong!
+                        </p>
+                        </div>
+                        <div id="spelling-topic" style="display:none;"></div>
+                            <button id="spelling_topic_btn" class="btn btn-warning" type="button">Get a word!</button>
+                    </div>
+
+                    <!--zelpuz-->
+                    <div id="zelpuz" style="display:none;">
+                        <div id="zelpuz-intro">
+                        <h1>Zelpuz</h1>
+                        <p>
+                            Gain a point for guessing correctly! <br/>
+                            <a target="_blank" href="https://www.metro.us/quiz-can-you-guess-the-definition-of-the-worlds-most-obscure-words/">Click this link to go to a list of obscure words!</a>
+                        </p>
+                        </div>
+                    </div>
+
+                    <!--Quiz Time-->
+                    <div id="quiz" style="display:none;">
+                        <div id="quiz-intro">
+                        <h1>Quiz Time</h1>
+                        <p>
+                            Gain a point per correct answer! <br/>
+                            <a target="_blank" href="https://www.quizwise.com/general-knowledge-quiz/archive">Click this link to find quiz questions.</a>
+                        </p>
+                        </div>
+                    </div>
+
+                    <!--General Knowledge-->
+                    <div id="gen" style="display:none;">
+                        <div id="gen-intro">
+                        <h1>General Knowlegde</h1>
+                        <p>
+                            Gain a point per correct answer! <br/>
+                            <a target="_blank" href="https://www.randomtriviagenerator.com/">Click this link to find quiz questions.</a>
+                        </p>
+                        </div>
+                    </div>
+
+                    <!--Free Choice-->
+                    <div id="free" style="display:none;">
+                        <div id="free-intro">
+                        <h1>Free Choice</h1>
+                        <p>
+                            Pick any of the challenge, you can do whatever you like!
+                        </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item"></div>
+                    <div class="col-md-6 item text">
+                        <p>Contact <a>wanaderingpgames@gmail.com</a> with suggestions or comments</p>
+                    </div>
+                    <div class="col item social"></div>
+                </div>
+                <p class="copyright">WanderingP © 2020</p>
+            </div>
+        </footer>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script src="assets/js/javafile.js"></script>
+</body>
+
+</html>
